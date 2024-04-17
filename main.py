@@ -18,6 +18,10 @@ def multiplication(num1, num2):
     return print(num1 * num2)
 
 
+def сonstruction(num1, num2):
+    return print(num1 ** num2)
+
+
 if operator == "+":
     additions(num1, num2)
 
@@ -29,3 +33,6 @@ elif operator == "/":
 
 elif operator == "*":
     multiplication(num1, num2)
+
+elif operator == "**":
+    сonstruction(num1, num2)

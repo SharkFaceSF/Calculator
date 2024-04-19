@@ -1,41 +1,44 @@
-num1 = int(input('Введите первое число: '))
+from functions import Arithmetic
+from hard_functions import Engineering
 
-num2 = int(input('Введите первое число: '))
 
 operator = str(input('Введите оператор: '))
+if operator in '+-/**':
+    num1 = float(input('Введите первое число: '))
 
+    num2 = float(input('Введите второе число: '))
 
-def additions(num1, num2):
-    return print(num1 + num2)
+    result = Arithmetic(num1, num2)
+else:
+    num1 = float(input('Введите число: '))
 
-def subtraction(num1, num2):
-    return print(num1 - num2)
-
-def division(num1, num2):
-    return print(num1 / num2)
-
-def multiplication(num1, num2):
-    return print(num1 * num2)
-
-
-def сonstruction(num1, num2):
-    return print(num1 ** num2)
+    hardresult = Engineering(num1)
 
 
 if operator == "+":
-    additions(num1, num2)
+    result.additions(num1, num2)
 
 elif operator == "-":
-    subtraction(num1, num2)
+    result.subtraction(num1, num2)
 
 elif operator == "/":
-    division(num1, num2)
+    result.division(num1, num2)
 
 elif operator == "*":
-    multiplication(num1, num2)
+    result.multiplication(num1, num2)
 
 elif operator == "**":
-    сonstruction(num1, num2)
+    result.сonstruction(num1, num2)
 
+elif operator == "!":
+    hardresult.fact(num1)
 
-#Начало новой ветки
+elif operator == "√":
+    hardresult.sqrt(num1)
+
+elif operator == "log":
+    hardresult.log(num1)
+
+elif operator == "[]":
+    (hardresult.modul(num1))
+
